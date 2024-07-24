@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io(process.env.HOST_URL, {
+			const socket = io("https://lakshay-chat-app.netlify.app", {
 				query: {
 					userId: authUser._id,
 				},
